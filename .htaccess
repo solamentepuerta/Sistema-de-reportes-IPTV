@@ -1,0 +1,18 @@
+RewriteEngine On
+
+# Habilitar el seguimiento de enlaces simbólicos
+Options +FollowSymLinks
+
+# Regla: Redirigir a install.php si config.php no existe
+
+# Condición 1: Asegurarse de no estar ya en install.php
+RewriteCond %{REQUEST_URI} !install\.php$ 
+
+# Condición 2: No redirigir archivos de recursos estáticos (imágenes, CSS, JS)
+RewriteCond %{REQUEST_URI} !\.(css|js|jpg|jpeg|png|gif|ico)$
+
+# Condición 3: Comprobar si el archivo config.php NO existe (usando ruta relativa correcta)
+RewriteCond %{DOCUMENT_ROOT}/includes/config.php !-f
+
+# Regla: Redirigir todas las solicitudes a install.php
+RewriteRule ^(.*)$ install.php [L]
