@@ -1,0 +1,65 @@
+/* Estilos personalizados para el sistema de soporte */
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 8px 20px;
+}
+
+/* Estilos para el formulario de tickets */
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.form-navigation {
+    margin-top: 20px;
+}
+
+/* Estilos para mensajes de alerta */
+.alert {
+    border-radius: 5px;
+}
+
+/* Estilos para el panel de administraci¨®n */
+.admin-sidebar {
+    min-height: calc(100vh - 56px);
+    background-color: #343a40;
+}
+
+.admin-sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.admin-sidebar .nav-link:hover {
+    color: #fff;
+}
+
+.admin-sidebar .nav-link.active {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos para m¨®viles */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+} 
